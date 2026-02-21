@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rajasthan — Premium Gemstones & Jewellery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet"/>
+<style>
+
+/* ═══════════════════════════════════════════════════
+   RESET & VARIABLES
+═══════════════════════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Jost',sans-serif;background:#0a0a0f;color:#e8e0d0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit;transition:all .3s ease}
+ul{list-style:none}
+::selection{background:#c9a84c;color:#0a0a0f}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#0a0a0f}
+::-webkit-scrollbar-thumb{background:#c9a84c;border-radius:3px}
+
+:root{
+  --gold:#c9a84c;
+  --gold-light:#e8c97a;
+  --gold-pale:#f5edd0;
+  --ivory:#fafaf5;
+  --cream:#f2e8d5;
+  --dark:#0a0a0f;
+  --dark2:#12121a;
+  --dark3:#1a1a26;
+  --dark4:#222233;
+  --text:#e8e0d0;
+  --text-muted:#8a8070;
+  --ruby:#9b1c2e;
+  --ruby-light:#c4263d;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',sans-serif;
+  --script:'Great Vibes',cursive;
+  --transition:.35s cubic-bezier(.4,0,.2,1);
+  --shadow-gold:0 8px 40px rgba(201,168,76,.25);
+  --shadow-card:0 20px 60px rgba(0,0,0,.5);
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════ */
+.container{max-width:1280px;margin:0 auto;padding:0 48px}
+.section{padding:100px 0}
+.section-header{text-align:center;margin-bottom:64px}
+.label{display:block;font-size:10px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.title{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;line-height:1.15;color:var(--ivory)}
+.title em{font-style:italic;color:var(--gold)}
+.divider{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+.divider::before,.divider::after{content:'';height:1px;width:56px;background:linear-gradient(to right,transparent,var(--gold))}
+.divider::after{background:linear-gradient(to left,transparent,var(--gold))}
+.divider-gem{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 34px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;border:none;cursor:pointer;transition:all var(--transition);position:relative;overflow:hidden}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#0a0a0f}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold)}
+.btn-outline{background:transparent;color:var(--gold);border:1.5px solid rgba(201,168,76,.5)}
+.btn-outline:hover{background:var(--gold);color:#0a0a0f;transform:translateY(-3px)}
+.badge{display:inline-block;padding:4px 10px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.badge-new{background:var(--gold);color:#0a0a0f}
+.badge-sale{background:var(--ruby);color:#fff}
+.badge-hot{background:var(--dark4);color:var(--gold);border:1px solid rgba(201,168,76,.3)}
+
+/* ═══════════════════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════════════════ */
+.topbar{background:#06060c;border-bottom:1px solid rgba(201,168,76,.1);padding:10px 0}
+.topbar .container{display:flex;align-items:center;justify-content:space-between}
+.topbar-info{display:flex;gap:28px;font-size:11px;color:rgba(201,168,76,.7);letter-spacing:.5px}
+.topbar-info a{color:rgba(201,168,76,.7)}
+.topbar-info a:hover{color:var(--gold)}
+.topbar-links{display:flex;gap:20px;font-size:11px}
+.topbar-links a{color:rgba(255,255,255,.4);letter-spacing:.5px}
+.topbar-links a:hover{color:var(--gold)}
+
+/* ═══════════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════════ */
+.navbar{background:rgba(10,10,15,.95);backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(201,168,76,.1)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;height:82px}
+.nav-logo{display:flex;align-items:center;gap:14px}
+.logo-mark{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark svg{width:24px;height:24px;fill:#0a0a0f}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-name{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ivory);letter-spacing:.5px}
+.logo-sub{font-size:9px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:10.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width var(--transition)}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.nav-btn{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);transition:all var(--transition);position:relative}
+.nav-btn:hover{background:rgba(201,168,76,.1);color:var(--gold)}
+.nav-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8}
+.cart-dot{position:absolute;top:7px;right:7px;width:14px;height:14px;background:var(--ruby);border-radius:50%;font-size:8px;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center}
+
+/* ═══════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════ */
+.hero{min-height:95vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,.07) 0%,transparent 60%),linear-gradient(160deg,#06060c 0%,#0d0d1a 40%,#10101f 100%)}
+.hero-stars{position:absolute;inset:0;pointer-events:none}
+.star-dot{position:absolute;border-radius:50%;animation:twinkle var(--dur,3s) ease-in-out infinite;animation-delay:var(--delay,0s)}
+@keyframes twinkle{0%,100%{opacity:var(--op1,.3);transform:scale(1)}50%{opacity:var(--op2,.9);transform:scale(1.3)}}
+.hero-glow{position:absolute;top:-20%;right:-10%;width:70%;height:140%;background:radial-gradient(ellipse,rgba(201,168,76,.06) 0%,transparent 65%);pointer-events:none}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.08);pointer-events:none}
+.hero .container{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px;position:relative;z-index:1;padding-top:40px;padding-bottom:40px}
+.hero-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.eyebrow-line{height:1px;width:44px;background:var(--gold)}
+.eyebrow-text{font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.hero-title{font-family:var(--serif);font-size:clamp(3rem,5.5vw,5rem);font-weight:300;color:var(--ivory);line-height:1.05;margin-bottom:6px}
+.hero-script{font-family:var(--script);font-size:clamp(2.8rem,5vw,4.5rem);color:var(--gold);display:block;margin-bottom:30px;line-height:1.3}
+.hero-desc{font-size:15px;color:rgba(232,224,208,.5);line-height:1.9;margin-bottom:44px;max-width:430px}
+.hero-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;margin-top:60px;padding-top:44px;border-top:1px solid rgba(201,168,76,.12)}
+.stat-num{font-family:var(--serif);font-size:36px;font-weight:600;color:var(--gold);display:block;line-height:1}
+.stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:6px;display:block}
+
+/* Hero Visual */
+.hero-visual{display:flex;align-items:center;justify-content:center;position:relative}
+.gem-stage{width:460px;height:460px;position:relative}
+.gem-stage-bg{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%)}
+.orbit-ring{position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.12);animation:spin var(--dur,25s) linear infinite;animation-direction:var(--dir,normal)}
+.orbit-ring::before{content:'';position:absolute;top:-5px;left:50%;transform:translateX(-50%);width:10px;height:10px;background:var(--gold);border-radius:50%;opacity:.7}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.gem-center{position:absolute;inset:80px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(201,168,76,.12),rgba(10,10,20,.8));border:1.5px solid rgba(201,168,76,.2);box-shadow:0 0 60px rgba(201,168,76,.1),inset 0 0 40px rgba(201,168,76,.05)}
+.gem-center svg{width:65%;height:65%;filter:drop-shadow(0 0 20px rgba(201,168,76,.5))}
+.satellite{position:absolute;width:68px;height:68px;border-radius:50%;overflow:hidden;border:2px solid rgba(201,168,76,.3);background:var(--dark2);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(201,168,76,.15)}
+.satellite:nth-child(1){top:0;left:50%;transform:translateX(-50%)}
+.satellite:nth-child(2){top:50%;right:0;transform:translateY(-50%)}
+.satellite:nth-child(3){bottom:0;left:50%;transform:translateX(-50%)}
+.satellite:nth-child(4){top:50%;left:0;transform:translateY(-50%)}
+.satellite-orbit{position:absolute;inset:0;animation:spin 18s linear infinite reverse}
+.satellite svg{width:55%;height:55%}
+
+/* ═══════════════════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════════════════ */
+.marquee{background:linear-gradient(135deg,var(--gold),var(--gold-light));padding:15px 0;overflow:hidden}
+.marquee-track{display:flex;animation:marquee 24s linear infinite;white-space:nowrap}
+.marquee-item{display:flex;align-items:center;gap:16px;padding:0 36px;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#0a0a0f;flex-shrink:0}
+.marquee-sep{width:5px;height:5px;background:#0a0a0f;border-radius:50%;opacity:.4}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════════════════
+   GEMSTONES
+═══════════════════════════════════════════════════ */
+.gems-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:28px}
+.gem-card{display:flex;flex-direction:column;align-items:center;gap:16px;cursor:pointer;text-align:center}
+.gem-orb{width:108px;height:108px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--dark3);border:2px solid transparent;background-clip:padding-box;position:relative;transition:all var(--transition)}
+.gem-orb::before{content:'';position:absolute;inset:-2px;border-radius:50%;background:linear-gradient(135deg,var(--gold),rgba(201,168,76,.1));z-index:-1;opacity:.4;transition:opacity var(--transition)}
+.gem-card:hover .gem-orb{transform:translateY(-8px);box-shadow:var(--shadow-gold)}
+.gem-card:hover .gem-orb::before{opacity:1}
+.gem-orb svg{width:68%;height:68%}
+.gem-name{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--text);letter-spacing:.3px}
+
+/* ═══════════════════════════════════════════════════
+   JEWELLERY CATEGORIES
+═══════════════════════════════════════════════════ */
+.jewel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.jewel-card{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
+.jewel-bg{position:absolute;inset:0;transition:transform .7s ease}
+.jewel-card:hover .jewel-bg{transform:scale(1.06)}
+.jewel-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 25%,rgba(6,6,12,.9) 100%)}
+.jewel-content{position:absolute;bottom:0;left:0;right:0;padding:28px 24px}
+.jewel-name{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ivory);margin-bottom:10px}
+.jewel-link{font-size:9.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateY(8px);transition:all var(--transition);display:inline-block}
+.jewel-card:hover .jewel-link{opacity:1;transform:translateY(0)}
+
+/* ═══════════════════════════════════════════════════
+   PRODUCT CARDS
+═══════════════════════════════════════════════════ */
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.product-card{background:var(--dark2);border:1px solid rgba(255,255,255,.05);border-radius:4px;overflow:hidden;transition:all var(--transition);position:relative}
+.product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-card);border-color:rgba(201,168,76,.15)}
+.product-img{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--dark3)}
+.product-img svg{width:100%;height:100%}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.product-card:hover .product-img img{transform:scale(1.06)}
+.product-hover{position:absolute;inset:0;background:rgba(6,6,12,.7);opacity:0;transition:opacity var(--transition);display:flex;align-items:center;justify-content:center}
+.product-card:hover .product-hover{opacity:1}
+.product-badge{position:absolute;top:14px;left:14px;z-index:2}
+.product-body{padding:18px 20px 22px}
+.product-cat{font-size:9.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.product-name{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ivory);margin-bottom:12px;line-height:1.3}
+.product-price{display:flex;align-items:baseline;gap:10px}
+.price{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ivory)}
+.price-old{font-size:13px;color:var(--text-muted);text-decoration:line-through}
+.price-off{font-size:11px;font-weight:600;color:var(--ruby-light)}
+
+/* ═══════════════════════════════════════════════════
+   TRUST STRIP
+═══════════════════════════════════════════════════ */
+.trust{background:var(--dark2);border-top:1px solid rgba(201,168,76,.08);border-bottom:1px solid rgba(201,168,76,.08);padding:52px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.trust-icon-wrap{width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);display:flex;align-items:center;justify-content:center;font-size:26px}
+.trust-title{font-family:var(--serif);font-size:17px;color:var(--ivory)}
+.trust-desc{font-size:12px;color:var(--text-muted)}
+
+/* ═══════════════════════════════════════════════════
+   SERVICES
+═══════════════════════════════════════════════════ */
+.services-bg{background:radial-gradient(ellipse at center,rgba(201,168,76,.04) 0%,transparent 70%),var(--dark)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service-card{background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.1);border-radius:4px;padding:38px 28px;text-align:center;transition:all var(--transition)}
+.service-card:hover{background:rgba(201,168,76,.05);border-color:rgba(201,168,76,.3);transform:translateY(-6px)}
+.service-icon{font-size:40px;display:block;margin-bottom:20px}
+.service-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ivory);margin-bottom:12px}
+.service-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:24px}
+
+/* ═══════════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.about-visuals{position:relative;height:540px}
+.about-main{position:absolute;top:0;left:0;width:72%;height:84%;border-radius:4px;overflow:hidden;box-shadow:var(--shadow-card)}
+.about-main svg{width:100%;height:100%}
+.about-accent{position:absolute;bottom:0;right:0;width:50%;height:56%;border-radius:4px;overflow:hidden;border:3px solid var(--dark);box-shadow:var(--shadow-card)}
+.about-accent svg{width:100%;height:100%}
+.about-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;width:108px;height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:3;box-shadow:var(--shadow-gold)}
+.badge-num{font-family:var(--serif);font-size:28px;font-weight:700;color:#0a0a0f;line-height:1}
+.badge-txt{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0a0a0f;opacity:.7;margin-top:2px}
+.about-content .title{text-align:left}
+.about-desc{font-size:15px;color:rgba(232,224,208,.5);line-height:1.9;margin-bottom:16px}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0 36px}
+.feat{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(232,224,208,.7);font-weight:400}
+.feat-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* ═══════════════════════════════════════════════════
+   GALLERY
+═══════════════════════════════════════════════════ */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+.gallery-item{position:relative;overflow:hidden;border-radius:3px;cursor:pointer}
+.gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gallery-item:nth-child(4){grid-column:span 2}
+.gallery-item svg{width:100%;height:100%;display:block}
+.gallery-overlay{position:absolute;inset:0;background:rgba(10,10,15,.55);opacity:0;transition:opacity var(--transition);display:flex;align-items:center;justify-content:center}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-zoom{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:300}
+.gallery-item svg{transition:transform .6s ease}
+.gallery-item:hover svg{transform:scale(1.06)}
+
+/* ═══════════════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════════════ */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:var(--dark2);border:1px solid rgba(255,255,255,.05);border-radius:4px;padding:36px 30px;position:relative;transition:all var(--transition)}
+.testi-card:hover{border-color:rgba(201,168,76,.2);transform:translateY(-4px);box-shadow:var(--shadow-card)}
+.testi-card::before{content:'\201C';position:absolute;top:16px;left:24px;font-family:var(--serif);font-size:72px;color:var(--gold);opacity:.2;line-height:1;pointer-events:none}
+.testi-stars{display:flex;gap:3px;margin-bottom:16px}
+.star{color:var(--gold);font-size:13px}
+.testi-text{font-family:var(--serif);font-size:16px;font-style:italic;color:rgba(232,224,208,.75);line-height:1.75;margin-bottom:24px}
+.testi-author{display:flex;align-items:center;gap:14px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--dark4));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;font-weight:600;color:#0a0a0f;flex-shrink:0;border:1.5px solid rgba(201,168,76,.3)}
+.testi-name{font-size:13px;font-weight:600;color:var(--ivory)}
+.testi-loc{font-size:11px;color:var(--text-muted);margin-top:2px}
+
+/* ═══════════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════════ */
+.contact-bg{background:radial-gradient(ellipse at 30% 50%,rgba(201,168,76,.04),transparent 60%),var(--dark)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:start}
+.contact-info-item{display:flex;gap:18px;margin-bottom:28px;padding:22px;background:var(--dark2);border:1px solid rgba(255,255,255,.04);border-radius:4px;transition:border-color var(--transition)}
+.contact-info-item:hover{border-color:rgba(201,168,76,.2)}
+.ci-icon{width:46px;height:46px;border-radius:50%;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ci-label{font-size:9.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.ci-value{font-size:14px;color:rgba(232,224,208,.75);line-height:1.6}
+.ci-sub{font-size:11.5px;color:var(--text-muted);margin-top:2px}
+
+/* Form */
+.form-panel{background:var(--dark2);border:1px solid rgba(201,168,76,.1);border-radius:4px;padding:48px}
+.form-panel-title{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--ivory);margin-bottom:6px}
+.form-panel-sub{font-size:13.5px;color:var(--text-muted);margin-bottom:36px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.form-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(232,224,208,.4)}
+.form-control{padding:13px 18px;background:rgba(255,255,255,.03);border:1.5px solid rgba(255,255,255,.07);border-radius:3px;font-family:var(--sans);font-size:14px;color:var(--text);outline:none;transition:all var(--transition)}
+.form-control:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.08)}
+.form-control::placeholder{color:rgba(255,255,255,.2)}
+textarea.form-control{resize:vertical;min-height:110px}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════ */
+.footer{background:#06060c;border-top:1px solid rgba(201,168,76,.1);padding-top:72px}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1.2fr;gap:52px;padding-bottom:56px;border-bottom:1px solid rgba(201,168,76,.08)}
+.footer-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.85;margin:18px 0 26px}
+.socials{display:flex;gap:12px}
+.social{width:36px;height:36px;border-radius:50%;border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;color:rgba(201,168,76,.6);font-size:13px;font-weight:600;transition:all var(--transition)}
+.social:hover{background:var(--gold);color:#0a0a0f;border-color:var(--gold)}
+.footer-col-title{font-size:10px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.footer-links{display:flex;flex-direction:column;gap:12px}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color var(--transition)}
+.footer-links a:hover{color:var(--gold)}
+.footer-ci{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:13px;color:rgba(255,255,255,.35);line-height:1.6}
+.footer-ci-icon{color:var(--gold);flex-shrink:0;margin-top:2px;font-size:15px}
+.footer-bottom{padding:22px 0;display:flex;align-items:center;justify-content:space-between}
+.footer-copy{font-size:11.5px;color:rgba(255,255,255,.2)}
+.footer-bottom-links{display:flex;gap:22px}
+.footer-bottom-links a{font-size:11.5px;color:rgba(255,255,255,.2);transition:color var(--transition)}
+.footer-bottom-links a:hover{color:var(--gold)}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .container{padding:0 28px}
+  .hero .container{grid-template-columns:1fr;gap:0}
+  .hero-visual{display:none}
+  .hero{min-height:75vh;align-items:center}
+  .gems-grid{grid-template-columns:repeat(3,1fr)}
+  .jewel-grid,.products-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-visuals{height:360px}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .gallery-item:nth-child(1){grid-column:1;grid-row:1}
+  .gallery-item:nth-child(4){grid-column:1}
+}
+@media(max-width:768px){
+  .section{padding:72px 0}
+  .container{padding:0 18px}
+  .topbar,.nav-links,.nav-search-wrap{display:none}
+  .gems-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .jewel-grid,.products-grid,.services-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .about-features,.form-row{grid-template-columns:1fr}
+  .form-panel{padding:28px 20px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .hero-stats{gap:24px}
+  .stat-num{font-size:28px}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     TOPBAR
+══════════════════════════════════════════════════ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <a href="tel:+919876543210">☎ +91 9560253584</a>
+      <a href="mailto:rajasthangemsjewel@gmail.com">✉ rajasthangemsjewel@gmail.com</a>
+      <span>Mon – Sun: 10 AM – 7 PM</span>
+    </div>
+    <div class="topbar-links">
+      <a href="#">Track Order</a>
+      <a href="#">Log In</a>
+      <a href="#">₹ INR</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Rajasthan</span>
+        <span class="logo-sub">Gems &amp; Jewellery</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#gemstones">Gemstones</a></li>
+      <li><a href="#jewellery">Jewellery</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-btn" title="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </a>
+      <a href="#" class="nav-btn" title="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </a>
+      <a href="#" class="nav-btn" title="Cart" style="position:relative">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-dot">3</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section class="hero">
+  <!-- Starfield -->
+  <div class="hero-stars">
+    <div class="star-dot" style="width:2px;height:2px;background:#c9a84c;top:12%;left:8%;--dur:4s;--delay:0s;--op1:.3;--op2:.9"></div>
+    <div class="star-dot" style="width:1.5px;height:1.5px;background:#fff;top:25%;left:20%;--dur:3s;--delay:.5s;--op1:.2;--op2:.7"></div>
+    <div class="star-dot" style="width:2px;height:2px;background:#c9a84c;top:60%;left:5%;--dur:5s;--delay:1s;--op1:.25;--op2:.8"></div>
+    <div class="star-dot" style="width:1px;height:1px;background:#fff;top:80%;left:15%;--dur:3.5s;--delay:.2s;--op1:.15;--op2:.6"></div>
+    <div class="star-dot" style="width:2.5px;height:2.5px;background:#c9a84c;top:18%;left:88%;--dur:4.5s;--delay:1.5s;--op1:.3;--op2:.85"></div>
+    <div class="star-dot" style="width:1.5px;height:1.5px;background:#fff;top:45%;left:92%;--dur:3.2s;--delay:.8s;--op1:.2;--op2:.65"></div>
+    <div class="star-dot" style="width:1px;height:1px;background:#c9a84c;top:72%;left:85%;--dur:4s;--delay:.3s;--op1:.2;--op2:.7"></div>
+    <div class="star-dot" style="width:2px;height:2px;background:#fff;top:35%;left:50%;--dur:5s;--delay:2s;--op1:.1;--op2:.5"></div>
+    <div class="star-dot" style="width:1.5px;height:1.5px;background:#c9a84c;top:88%;left:60%;--dur:3.8s;--delay:.6s;--op1:.2;--op2:.6"></div>
+    <div class="star-dot" style="width:1px;height:1px;background:#fff;top:5%;left:65%;--dur:4.2s;--delay:1.2s;--op1:.15;--op2:.55"></div>
+  </div>
+  <div class="hero-glow"></div>
+  <!-- Orbit rings -->
+  <div class="hero-ring" style="top:10%;left:55%;width:600px;height:600px;opacity:.6"></div>
+  <div class="hero-ring" style="top:5%;left:60%;width:460px;height:460px;opacity:.4"></div>
+
+  <div class="container">
+    <!-- Text -->
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Finest Astrology Gems Since 1995</span>
+      </div>
+      <h1 class="hero-title">An Exceptional<br/>Collection of</h1>
+      <span class="hero-script">Gemstones &amp; Jewellery</span>
+      <p class="hero-desc">Discover authentic gemstones hand-selected for their astrological power, natural radiance, and exceptional quality. Each stone carries the cosmos within it.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-gold">Explore Collection</a>
+        <a href="#about" class="btn btn-outline">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="stat-num">500+</span><span class="stat-label">Gem Varieties</span></div>
+        <div><span class="stat-num">28yr</span><span class="stat-label">Of Experience</span></div>
+        <div><span class="stat-num">15k+</span><span class="stat-label">Happy Clients</span></div>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="hero-visual">
+      <div class="gem-stage">
+        <div class="gem-stage-bg"></div>
+        <!-- Orbit rings -->
+        <div class="orbit-ring" style="inset:0;--dur:30s;--dir:normal"></div>
+        <div class="orbit-ring" style="inset:30px;--dur:22s;--dir:reverse;opacity:.5"></div>
+        <!-- Center gem -->
+        <div class="gem-center">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a3a8f"/>
+                <stop offset="50%" stop-color="#2550c0"/>
+                <stop offset="100%" stop-color="#0d1b3e"/>
+              </linearGradient>
+              <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c9a84c"/>
+                <stop offset="100%" stop-color="#f5edd0"/>
+              </linearGradient>
+            </defs>
+            <polygon points="100,12 162,55 155,148 100,182 45,148 38,55" fill="url(#cg1)" stroke="url(#cg2)" stroke-width="1.5"/>
+            <polygon points="100,12 162,55 100,82" fill="rgba(255,255,255,0.18)"/>
+            <polygon points="100,12 38,55 100,82" fill="rgba(255,255,255,0.08)"/>
+            <polygon points="162,55 155,148 100,82" fill="rgba(0,0,0,0.18)"/>
+            <polygon points="38,55 45,148 100,82" fill="rgba(255,255,255,0.06)"/>
+            <polygon points="100,82 155,148 100,182 45,148" fill="rgba(0,0,0,0.22)"/>
+            <ellipse cx="80" cy="46" rx="20" ry="11" fill="rgba(255,255,255,0.22)" transform="rotate(-18,80,46)"/>
+          </svg>
+        </div>
+        <!-- Orbiting satellites -->
+        <div class="satellite-orbit">
+          <div class="satellite">
+            <svg viewBox="0 0 80 80"><defs><linearGradient id="s1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ee3055"/><stop offset="100%" stop-color="#7a0820"/></linearGradient></defs><ellipse cx="40" cy="40" rx="30" ry="24" fill="url(#s1)"/><ellipse cx="30" cy="30" rx="10" ry="6" fill="rgba(255,255,255,0.25)" transform="rotate(-20,30,30)"/></svg>
+          </div>
+          <div class="satellite">
+            <svg viewBox="0 0 80 80"><defs><linearGradient id="s2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0c040"/><stop offset="100%" stop-color="#8b5000"/></linearGradient></defs><polygon points="40,8 68,30 62,62 40,72 18,62 12,30" fill="url(#s2)"/><polygon points="40,8 68,30 40,32" fill="rgba(255,255,255,0.2)"/></svg>
+          </div>
+          <div class="satellite">
+            <svg viewBox="0 0 80 80"><defs><linearGradient id="s3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#40cc60"/><stop offset="100%" stop-color="#1a6630"/></linearGradient></defs><polygon points="40,10 62,26 66,52 50,66 30,66 14,52 18,26" fill="url(#s3)"/><ellipse cx="33" cy="26" rx="9" ry="5" fill="rgba(255,255,255,0.3)" transform="rotate(-15,33,26)"/></svg>
+          </div>
+          <div class="satellite">
+            <svg viewBox="0 0 80 80"><defs><radialGradient id="s4" cx="40%" cy="35%"><stop offset="0%" stop-color="#fff"/><stop offset="60%" stop-color="#ddd"/><stop offset="100%" stop-color="#aaa"/></radialGradient></defs><circle cx="40" cy="40" r="28" fill="url(#s4)"/><ellipse cx="30" cy="30" rx="10" ry="6" fill="rgba(255,255,255,0.5)" transform="rotate(-20,30,30)"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     MARQUEE
+══════════════════════════════════════════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Free Shipping Above ₹5,000 <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Certified Genuine Gemstones <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Expert Vedic Consultation <span class="marquee-sep"></span></span>
+    <span class="marquee-item">30-Day Easy Returns <span class="marquee-sep"></span></span>
+    <span class="marquee-item">BIS Hallmarked Gold &amp; Silver <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Custom Jewellery Orders <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Free Shipping Above ₹5,000 <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Certified Genuine Gemstones <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Expert Vedic Consultation <span class="marquee-sep"></span></span>
+    <span class="marquee-item">30-Day Easy Returns <span class="marquee-sep"></span></span>
+    <span class="marquee-item">BIS Hallmarked Gold &amp; Silver <span class="marquee-sep"></span></span>
+    <span class="marquee-item">Custom Jewellery Orders <span class="marquee-sep"></span></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     GEMSTONES
+══════════════════════════════════════════════════ -->
+<section class="section" id="gemstones">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Celestial Collection</span>
+      <h2 class="title">Precious <em>Gemstones</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+      <p style="font-size:15px;color:var(--text-muted);margin-top:18px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8">Each stone is hand-selected and certified — carrying unique astrological energies to guide your destiny.</p>
+    </div>
+    <div class="gems-grid">
+
+      <!-- Topaz -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gTopaz" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0c040"/><stop offset="100%" stop-color="#c88010"/></linearGradient></defs>
+            <polygon points="50,8 84,26 88,65 64,90 36,90 12,65 16,26" fill="url(#gTopaz)"/>
+            <polygon points="50,8 84,26 50,38" fill="rgba(255,255,255,0.28)"/>
+            <polygon points="50,8 16,26 50,38" fill="rgba(255,255,255,0.12)"/>
+            <ellipse cx="38" cy="22" rx="13" ry="8" fill="rgba(255,255,255,0.32)" transform="rotate(-15,38,22)"/>
+          </svg>
+        </div>
+        <span class="gem-name">Topaz Stone</span>
+      </a>
+
+      <!-- Amber -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gAmber" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f08030"/><stop offset="100%" stop-color="#8b3a00"/></linearGradient></defs>
+            <ellipse cx="50" cy="50" rx="40" ry="34" fill="url(#gAmber)"/>
+            <ellipse cx="36" cy="36" rx="14" ry="8" fill="rgba(255,255,255,0.28)" transform="rotate(-20,36,36)"/>
+          </svg>
+        </div>
+        <span class="gem-name">Amber Stone</span>
+      </a>
+
+      <!-- Yellow Sapphire -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gYS" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffe060"/><stop offset="100%" stop-color="#c0a000"/></linearGradient></defs>
+            <polygon points="50,8 80,30 80,70 50,92 20,70 20,30" fill="url(#gYS)"/>
+            <polygon points="50,8 80,30 50,40" fill="rgba(255,255,255,0.3)"/>
+            <polygon points="50,8 20,30 50,40" fill="rgba(255,255,255,0.15)"/>
+            <ellipse cx="38" cy="24" rx="13" ry="8" fill="rgba(255,255,255,0.32)" transform="rotate(-10,38,24)"/>
+          </svg>
+        </div>
+        <span class="gem-name">Yellow Sapphire</span>
+      </a>
+
+      <!-- Ruby -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gRuby" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ee3055"/><stop offset="100%" stop-color="#7a0820"/></linearGradient></defs>
+            <polygon points="50,6 74,30 80,62 60,88 40,88 20,62 26,30" fill="url(#gRuby)"/>
+            <polygon points="50,6 74,30 50,40" fill="rgba(255,255,255,0.25)"/>
+            <ellipse cx="38" cy="22" rx="12" ry="7" fill="rgba(255,255,255,0.3)" transform="rotate(-15,38,22)"/>
+          </svg>
+        </div>
+        <span class="gem-name">Ruby (Manik)</span>
+      </a>
+
+      <!-- Turquoise -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="gTq" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#40cccc"/><stop offset="100%" stop-color="#007a7a"/></linearGradient></defs>
+            <ellipse cx="50" cy="50" rx="40" ry="32" fill="url(#gTq)"/>
+            <path d="M28,46 Q50,30 72,46 Q50,62 28,46" fill="rgba(255,255,255,0.15)"/>
+            <ellipse cx="35" cy="38" rx="14" ry="8" fill="rgba(255,255,255,0.25)" transform="rotate(-15,35,38)"/>
+          </svg>
+        </div>
+        <span class="gem-name">Turquoise</span>
+      </a>
+
+      <!-- Pearl -->
+      <a href="#products" class="gem-card">
+        <div class="gem-orb">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><radialGradient id="gPearl" cx="38%" cy="35%"><stop offset="0%" stop-color="#fff"/><stop offset="55%" stop-color="#ddd"/><stop offset="100%" stop-color="#b0b0b0"/></radialGradient></defs>
+            <circle cx="38" cy="42" r="22" fill="url(#gPearl)" stroke="rgba(200,200,200,0.3)" stroke-width="1"/>
+            <circle cx="62" cy="55" r="18" fill="url(#gPearl)" stroke="rgba(200,200,200,0.3)" stroke-width="1"/>
+            <circle cx="52" cy="26" r="14" fill="url(#gPearl)" stroke="rgba(200,200,200,0.3)" stroke-width="1"/>
+          </svg>
+        </div>
+        <span class="gem-name">White Pearls</span>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:52px">
+      <a href="#products" class="btn btn-outline">View All Gemstones</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     JEWELLERY CATEGORIES
+══════════════════════════════════════════════════ -->
+<section style="padding:100px 0;background:var(--dark2)" id="jewellery">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Crafted with Love</span>
+      <h2 class="title">Fine <em>Jewellery</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+    </div>
+    <div class="jewel-grid">
+
+      <!-- Gold -->
+      <a href="#products" class="jewel-card">
+        <div class="jewel-bg">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs><linearGradient id="jGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c88820"/><stop offset="50%" stop-color="#f0c040"/><stop offset="100%" stop-color="#8b5000"/></linearGradient></defs>
+            <rect width="300" height="400" fill="url(#jGold)" opacity=".9"/>
+            <!-- Necklace silhouette -->
+            <path d="M50,60 Q150,130 250,60" fill="none" stroke="rgba(255,220,80,0.6)" stroke-width="6"/>
+            <circle cx="150" cy="160" r="30" fill="rgba(255,200,40,0.5)" stroke="rgba(255,220,80,0.8)" stroke-width="3"/>
+            <circle cx="150" cy="160" r="18" fill="rgba(255,220,80,0.7)"/>
+            <ellipse cx="138" cy="152" rx="8" ry="5" fill="rgba(255,255,255,0.4)" transform="rotate(-15,138,152)"/>
+            <line x1="150" y1="190" x2="150" y2="230" stroke="rgba(255,200,40,0.5)" stroke-width="3"/>
+            <polygon points="150,230 135,255 165,255" fill="rgba(255,200,40,0.5)"/>
+            <!-- sparkles -->
+            <text x="240" y="100" font-size="22" fill="rgba(255,240,100,0.5)">✦</text>
+            <text x="40" y="150" font-size="14" fill="rgba(255,240,100,0.4)">✦</text>
+          </svg>
+        </div>
+        <div class="jewel-overlay"></div>
+        <div class="jewel-content">
+          <div class="jewel-name">Gold Jewellery</div>
+          <span class="jewel-link">Browse Collection →</span>
+        </div>
+      </a>
+
+      <!-- Silver -->
+      <a href="#products" class="jewel-card">
+        <div class="jewel-bg">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs><linearGradient id="jSilver" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#555"/><stop offset="50%" stop-color="#ccc"/><stop offset="100%" stop-color="#333"/></linearGradient></defs>
+            <rect width="300" height="400" fill="url(#jSilver)" opacity=".95"/>
+            <circle cx="150" cy="120" r="35" fill="none" stroke="rgba(200,200,200,0.6)" stroke-width="4"/>
+            <circle cx="150" cy="120" r="20" fill="rgba(180,180,180,0.5)"/>
+            <circle cx="150" cy="120" r="10" fill="rgba(220,220,220,0.7)"/>
+            <line x1="150" y1="155" x2="150" y2="195" stroke="rgba(200,200,200,0.5)" stroke-width="3"/>
+            <ellipse cx="150" cy="215" rx="40" ry="26" fill="rgba(180,180,180,0.4)" stroke="rgba(200,200,200,0.5)" stroke-width="2"/>
+            <ellipse cx="140" cy="110" rx="9" ry="5" fill="rgba(255,255,255,0.35)" transform="rotate(-20,140,110)"/>
+            <text x="60" y="80" font-size="18" fill="rgba(200,200,200,0.3)">✦</text>
+            <text x="230" y="180" font-size="14" fill="rgba(200,200,200,0.3)">✦</text>
+          </svg>
+        </div>
+        <div class="jewel-overlay"></div>
+        <div class="jewel-content">
+          <div class="jewel-name">Silver Jewellery</div>
+          <span class="jewel-link">Browse Collection →</span>
+        </div>
+      </a>
+
+      <!-- Diamond -->
+      <a href="#products" class="jewel-card">
+        <div class="jewel-bg">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs><linearGradient id="jDiam" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d1b3e"/><stop offset="50%" stop-color="#1a3080"/><stop offset="100%" stop-color="#060c22"/></linearGradient><linearGradient id="jDiam2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0f0ff"/><stop offset="100%" stop-color="#90b0d0"/></linearGradient></defs>
+            <rect width="300" height="400" fill="url(#jDiam)"/>
+            <polygon points="150,60 210,115 210,200 172,250 128,250 90,200 90,115" fill="url(#jDiam2)" opacity=".9"/>
+            <polygon points="150,60 210,115 150,135" fill="rgba(255,255,255,0.3)"/>
+            <polygon points="150,60 90,115 150,135" fill="rgba(255,255,255,0.15)"/>
+            <polygon points="210,115 210,200 150,135" fill="rgba(0,0,80,0.2)"/>
+            <polygon points="90,115 90,200 150,135" fill="rgba(255,255,255,0.08)"/>
+            <polygon points="150,135 210,200 172,250 128,250 90,200" fill="rgba(0,0,80,0.25)"/>
+            <ellipse cx="130" cy="82" rx="18" ry="10" fill="rgba(255,255,255,0.38)" transform="rotate(-15,130,82)"/>
+            <text x="50" y="100" font-size="16" fill="rgba(180,220,255,0.3)">✦</text>
+            <text x="235" y="220" font-size="20" fill="rgba(180,220,255,0.25)">✦</text>
+          </svg>
+        </div>
+        <div class="jewel-overlay"></div>
+        <div class="jewel-content">
+          <div class="jewel-name">Diamond Jewellery</div>
+          <span class="jewel-link">Browse Collection →</span>
+        </div>
+      </a>
+
+      <!-- Platinum -->
+      <a href="#products" class="jewel-card">
+        <div class="jewel-bg">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs><linearGradient id="jPlat" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a1a1a"/><stop offset="50%" stop-color="#666"/><stop offset="100%" stop-color="#0a0a0a"/></linearGradient><linearGradient id="jPlat2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c8c8c8"/><stop offset="100%" stop-color="#606060"/></linearGradient></defs>
+            <rect width="300" height="400" fill="url(#jPlat)"/>
+            <circle cx="150" cy="160" r="80" fill="none" stroke="url(#jPlat2)" stroke-width="6"/>
+            <circle cx="150" cy="160" r="55" fill="none" stroke="url(#jPlat2)" stroke-width="3" opacity=".6"/>
+            <circle cx="150" cy="160" r="30" fill="none" stroke="url(#jPlat2)" stroke-width="2" opacity=".4"/>
+            <circle cx="150" cy="160" r="12" fill="url(#jPlat2)"/>
+            <ellipse cx="138" cy="150" rx="8" ry="5" fill="rgba(255,255,255,0.35)" transform="rotate(-20,138,150)"/>
+            <text x="55" y="80" font-size="18" fill="rgba(160,160,160,0.3)">✦</text>
+            <text x="230" y="260" font-size="14" fill="rgba(160,160,160,0.25)">✦</text>
+          </svg>
+        </div>
+        <div class="jewel-overlay"></div>
+        <div class="jewel-content">
+          <div class="jewel-name">Platinum Jewellery</div>
+          <span class="jewel-link">Browse Collection →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FEATURED PRODUCTS
+══════════════════════════════════════════════════ -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Handpicked for You</span>
+      <h2 class="title">Featured <em>Products</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+    </div>
+    <div class="products-grid">
+
+      <!-- 1 -->
+      <div class="product-card">
+        <div class="product-badge"><span class="badge badge-new">New</span></div>
+        <div class="product-img">
+          <img src="https://leadinglightjewellery.com/cdn/shop/files/IMG_8330.jpg?v=1716440716" alt="Ruby Gemstone" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Loose Gemstone</div>
+          <div class="product-name">Natural Ruby (Manik)</div>
+          <div class="product-price"><span class="price">₹2,499</span><span class="price-old">₹3,200</span><span class="price-off">−22%</span></div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card">
+        <div class="product-badge"><span class="badge badge-hot">Hot</span></div>
+        <div class="product-img">
+          <img src="https://m.media-amazon.com/images/I/51m9MT2TMuL._AC_UY1100_.jpg" alt="Sapphire Ring" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Ring</div>
+          <div class="product-name">Gold Sapphire Ring</div>
+          <div class="product-price"><span class="price">₹18,500</span></div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://cdn.shopaccino.com/jewellery/products/yellow-sapphire-gold-rings-970184_m.jpg?v=556" alt="Yellow Sapphire" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Loose Gemstone</div>
+          <div class="product-name">Yellow Sapphire (Pukhraj)</div>
+          <div class="product-price"><span class="price">₹5,200</span></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <div class="product-badge"><span class="badge badge-sale">Sale</span></div>
+        <div class="product-img">
+          <img src="data:image/jpeg;base64,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" alt="Ruby Gemstone" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Pendant</div>
+          <div class="product-name">Lapis Lazuli Pendant</div>
+          <div class="product-price"><span class="price">₹1,899</span><span class="price-old">₹2,600</span><span class="price-off">−27%</span></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqKU31jBTfOo-YMomKoHJvwFwy4i6Dhr_5w&s" alt="Sapphire Ring" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Loose Gemstone</div>
+          <div class="product-name">Emerald (Panna)</div>
+          <div class="product-price"><span class="price">₹6,800</span><span class="price-old">₹8,500</span></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <div class="product-badge"><span class="badge badge-new">New</span></div>
+        <div class="product-img">
+          <img src="data:image/jpeg;base64,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" alt="Sapphire Ring" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Necklace</div>
+          <div class="product-name">Pearl Gold Necklace</div>
+          <div class="product-price"><span class="price">₹12,400</span></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="product-card">
+        <div class="product-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1cdDyQ2lUSd0ZKdwJe2L3NyMNMxiWJnnUgg&s" alt="Sapphire Ring" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Loose Gemstone</div>
+          <div class="product-name">Amethyst Grade A</div>
+          <div class="product-price"><span class="price">₹1,299</span></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="product-card">
+        <div class="product-badge"><span class="badge badge-sale">Sale</span></div>
+        <div class="product-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEatZELQlD9veXX8QN35s7hSVnK1wY6G-mw&s" alt="Sapphire Ring" style="width:100%;height:100%;object-fit:cover;border-radius:8px"/>
+          <div class="product-hover"><a href="#" class="btn btn-gold" style="padding:10px 22px;font-size:10px">Quick View</a></div>
+        </div>
+        <div class="product-body">
+          <div class="product-cat">Pendant</div>
+          <div class="product-name">Diamond Solitaire Pendant</div>
+          <div class="product-price"><span class="price">₹18,200</span><span class="price-old">₹24,000</span><span class="price-off">−24%</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:56px">
+      <a href="#" class="btn btn-outline">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     TRUST
+══════════════════════════════════════════════════ -->
+<div class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon-wrap">💎</div>
+        <div class="trust-title">100% Genuine</div>
+        <div class="trust-desc">Every stone certified &amp; authenticated</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-wrap">🚚</div>
+        <div class="trust-title">Free Shipping</div>
+        <div class="trust-desc">On orders above ₹5,000</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-wrap">🔄</div>
+        <div class="trust-title">Easy Returns</div>
+        <div class="trust-desc">30-day hassle-free policy</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-wrap">🔮</div>
+        <div class="trust-title">Expert Guidance</div>
+        <div class="trust-desc">Personalised Vedic consultation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════════ -->
+<section class="section services-bg" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">What We Offer</span>
+      <h2 class="title">Astrology <em>Services</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+      <p style="font-size:15px;color:var(--text-muted);margin-top:18px">Guiding your future with the wisdom of the cosmos</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">💑</span>
+        <div class="service-title">Romance &amp; Marriage</div>
+        <div class="service-desc">Discover gemstones to attract love, strengthen relationships, and align your energy with your soulmate's destiny.</div>
+        <a href="#contact" class="btn btn-outline" style="font-size:9.5px;padding:10px 20px">Enquire Now</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📚</span>
+        <div class="service-title">Education</div>
+        <div class="service-desc">Enhance memory, focus, and academic performance with stones aligned to your birth chart and Mercury's position.</div>
+        <a href="#contact" class="btn btn-outline" style="font-size:9.5px;padding:10px 20px">Enquire Now</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📈</span>
+        <div class="service-title">Business</div>
+        <div class="service-desc">Attract prosperity and remove obstacles. Gemstones selected to boost confidence, leadership, and financial success.</div>
+        <a href="#contact" class="btn btn-outline" style="font-size:9.5px;padding:10px 20px">Enquire Now</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💰</span>
+        <div class="service-title">Wealth</div>
+        <div class="service-desc">Align your aura with abundance. Stones chosen specifically to remove financial blockages and invite lasting prosperity.</div>
+        <a href="#contact" class="btn btn-outline" style="font-size:9.5px;padding:10px 20px">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════ -->
+<section style="padding:100px 0;background:var(--dark2)" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Visuals -->
+      <div class="about-visuals">
+        <div class="about-main">
+          <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+            <defs>
+              <linearGradient id="abg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+              <linearGradient id="abg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#f2dfa0"/></linearGradient>
+              <radialGradient id="abglow" cx="50%" cy="40%"><stop offset="0%" stop-color="rgba(201,168,76,0.15)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            </defs>
+            <rect width="440" height="520" fill="url(#abg1)"/>
+            <circle cx="220" cy="200" r="150" fill="url(#abglow)"/>
+            <!-- Large ring -->
+            <ellipse cx="220" cy="300" rx="100" ry="35" fill="none" stroke="url(#abg2)" stroke-width="18"/>
+            <ellipse cx="220" cy="300" rx="100" ry="35" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="6"/>
+            <!-- Stone setting -->
+            <ellipse cx="220" cy="165" rx="66" ry="58" fill="url(#abg2)" opacity=".9"/>
+            <!-- Blue sapphire in setting -->
+            <defs><linearGradient id="abgs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a3a8f"/><stop offset="100%" stop-color="#0d1b3e"/></linearGradient></defs>
+            <ellipse cx="220" cy="165" rx="48" ry="42" fill="url(#abgs)"/>
+            <ellipse cx="220" cy="165" rx="48" ry="42" fill="none" stroke="url(#abg2)" stroke-width="2"/>
+            <ellipse cx="202" cy="150" rx="18" ry="10" fill="rgba(255,255,255,0.2)" transform="rotate(-15,202,150)"/>
+            <!-- Sparkles -->
+            <text x="340" y="100" font-size="22" fill="rgba(201,168,76,0.5)">✦</text>
+            <text x="60" y="140" font-size="14" fill="rgba(201,168,76,0.4)">✦</text>
+            <text x="360" y="260" font-size="12" fill="rgba(201,168,76,0.3)">✦</text>
+            <text x="220" y="460" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="rgba(201,168,76,0.5)" font-style="italic">Fine Craftsmanship</text>
+          </svg>
+        </div>
+        <div class="about-accent">
+          <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+            <defs>
+              <linearGradient id="acg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0a0f"/><stop offset="100%" stop-color="#14141e"/></linearGradient>
+              <linearGradient id="acg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0c040"/><stop offset="100%" stop-color="#8b5000"/></linearGradient>
+              <radialGradient id="acglow" cx="50%" cy="45%"><stop offset="0%" stop-color="rgba(201,168,76,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            </defs>
+            <rect width="260" height="300" fill="url(#acg1)"/>
+            <circle cx="130" cy="130" r="90" fill="url(#acglow)"/>
+            <polygon points="130,40 190,95 198,170 162,218 98,218 62,170 70,95" fill="url(#acg2)"/>
+            <polygon points="130,40 190,95 130,118" fill="rgba(255,255,255,0.26)"/>
+            <polygon points="130,40 70,95 130,118" fill="rgba(255,255,255,0.12)"/>
+            <polygon points="190,95 198,170 130,118" fill="rgba(0,0,0,0.18)"/>
+            <ellipse cx="110" cy="68" rx="20" ry="12" fill="rgba(255,255,255,0.3)" transform="rotate(-15,110,68)"/>
+            <text x="130" y="262" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="rgba(201,168,76,0.6)">Citrine Topaz</text>
+          </svg>
+        </div>
+        <div class="about-badge">
+          <span class="badge-num">28+</span>
+          <span class="badge-txt">Years of<br/>Excellence</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <span class="label" style="text-align:left">Our Legacy</span>
+        <h2 class="title" style="text-align:left;margin-bottom:18px">The <em>Story</em> Behind<br/>Rajasthan</h2>
+        <div class="divider" style="justify-content:flex-start;margin-bottom:28px"><span class="divider-gem"></span></div>
+        <p class="about-desc">Founded in 1995 in Mumbai, Rajasthan was born from a deep passion for the mystical world of gemstones and their connection to human destiny. Over nearly three decades, we've grown from a modest gem boutique to one of India's most trusted destinations for authentic astrological gemstones and fine jewellery.</p>
+        <p class="about-desc">Our team of certified gemologists and experienced Vedic astrologers work together to ensure every stone is not just beautiful, but perfectly aligned to serve its wearer's highest potential.</p>
+        <div class="about-features">
+          <div class="feat"><span class="feat-dot"></span>GIA Certified Gemologists</div>
+          <div class="feat"><span class="feat-dot"></span>500+ Gem Varieties in Stock</div>
+          <div class="feat"><span class="feat-dot"></span>Custom Jewellery Design</div>
+          <div class="feat"><span class="feat-dot"></span>Vedic Astrology Consultation</div>
+          <div class="feat"><span class="feat-dot"></span>PAN India Delivery</div>
+          <div class="feat"><span class="feat-dot"></span>Worldwide Shipping</div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Get in Touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     GALLERY
+══════════════════════════════════════════════════ -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Visual Stories</span>
+      <h2 class="title">Our <em>Gallery</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+    </div>
+    <div class="gallery-grid">
+
+      <!-- 1 wide+tall -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 500 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#0d0d1a,#1a1230)">
+          <defs>
+            <linearGradient id="gal1a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8b5000"/></linearGradient>
+            <radialGradient id="gal1glow" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(201,168,76,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <circle cx="250" cy="200" r="180" fill="url(#gal1glow)"/>
+          <ellipse cx="250" cy="310" rx="95" ry="32" fill="none" stroke="url(#gal1a)" stroke-width="16"/>
+          <ellipse cx="250" cy="310" rx="95" ry="32" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="5"/>
+          <ellipse cx="250" cy="155" rx="64" ry="56" fill="url(#gal1a)" opacity=".9"/>
+          <defs><linearGradient id="gal1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ee3055"/><stop offset="100%" stop-color="#7a0820"/></linearGradient></defs>
+          <ellipse cx="250" cy="155" rx="46" ry="40" fill="url(#gal1s)"/>
+          <ellipse cx="234" cy="141" rx="16" ry="9" fill="rgba(255,255,255,0.22)" transform="rotate(-15,234,141)"/>
+          <text x="100" y="80" font-size="20" fill="rgba(201,168,76,0.4)">✦</text>
+          <text x="380" y="120" font-size="14" fill="rgba(201,168,76,0.35)">✦</text>
+          <text x="60" y="380" font-size="12" fill="rgba(201,168,76,0.3)">✦</text>
+          <text x="410" y="390" font-size="18" fill="rgba(201,168,76,0.3)">✦</text>
+          <text x="250" y="415" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="rgba(201,168,76,0.5)" font-style="italic">Ruby Ring Collection</text>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+      <!-- 2 -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#0a1a0a,#102010)">
+          <defs><linearGradient id="gal2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#40cc60"/><stop offset="100%" stop-color="#1a6630"/></linearGradient></defs>
+          <polygon points="120,22 184,75 188,154 156,196 84,196 52,154 56,75" fill="url(#gal2)"/>
+          <polygon points="120,22 184,75 120,100" fill="rgba(255,255,255,0.24)"/>
+          <ellipse cx="100" cy="50" rx="22" ry="13" fill="rgba(255,255,255,0.3)" transform="rotate(-15,100,50)"/>
+          <text x="185" y="50" font-size="14" fill="rgba(80,200,80,0.4)">✦</text>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#1a0a0a,#2a0a0a)">
+          <defs><linearGradient id="gal3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ee3055"/><stop offset="100%" stop-color="#7a0820"/></linearGradient></defs>
+          <ellipse cx="120" cy="110" rx="75" ry="62" fill="url(#gal3)"/>
+          <ellipse cx="98" cy="88" rx="26" ry="15" fill="rgba(255,255,255,0.22)" transform="rotate(-15,98,88)"/>
+          <text x="60" y="50" font-size="14" fill="rgba(220,80,80,0.4)">✦</text>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+      <!-- 4 wide -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#06060c,#0d0d18)">
+          <defs>
+            <radialGradient id="gal4g" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(201,168,76,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            <linearGradient id="gal4r" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ee3055"/><stop offset="100%" stop-color="#7a0820"/></linearGradient>
+            <linearGradient id="gal4b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a3a8f"/><stop offset="100%" stop-color="#0d1b3e"/></linearGradient>
+            <linearGradient id="gal4y" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffe060"/><stop offset="100%" stop-color="#c0a000"/></linearGradient>
+          </defs>
+          <circle cx="250" cy="110" r="160" fill="url(#gal4g)"/>
+          <polygon points="120,35 155,72 158,128 134,160 106,160 82,128 85,72" fill="url(#gal4r)" opacity=".85"/>
+          <ellipse cx="106" cy="54" rx="14" ry="8" fill="rgba(255,255,255,0.2)" transform="rotate(-15,106,54)"/>
+          <polygon points="250,22 290,62 293,124 266,158 234,158 207,124 210,62" fill="url(#gal4b)" opacity=".85"/>
+          <ellipse cx="234" cy="44" rx="14" ry="8" fill="rgba(255,255,255,0.18)" transform="rotate(-15,234,44)"/>
+          <polygon points="380,35 415,72 418,128 394,160 366,160 342,128 345,72" fill="url(#gal4y)" opacity=".85"/>
+          <ellipse cx="366" cy="54" rx="14" ry="8" fill="rgba(255,255,255,0.22)" transform="rotate(-15,366,54)"/>
+          <text x="90" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="rgba(201,168,76,0.5)">Ruby</text>
+          <text x="250" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="rgba(201,168,76,0.5)">Sapphire</text>
+          <text x="385" y="195" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="rgba(201,168,76,0.5)">Topaz</text>
+          <text x="60" y="50" font-size="14" fill="rgba(201,168,76,0.3)">✦</text>
+          <text x="455" y="80" font-size="16" fill="rgba(201,168,76,0.3)">✦</text>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#0a0a1a,#141428)">
+          <defs><linearGradient id="gal5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9060ee"/><stop offset="100%" stop-color="#4a1a8a"/></linearGradient></defs>
+          <circle cx="120" cy="100" r="75" fill="url(#gal5)" opacity=".35"/>
+          <polygon points="120,28 172,80 175,152 148,188 92,188 65,152 68,80" fill="url(#gal5)"/>
+          <polygon points="120,28 172,80 120,104" fill="rgba(255,255,255,0.2)"/>
+          <ellipse cx="100" cy="56" rx="20" ry="12" fill="rgba(255,255,255,0.25)" transform="rotate(-15,100,56)"/>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="gallery-item">
+        <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#0f0f0f,#1a1a1a)">
+          <defs>
+            <radialGradient id="gal6p" cx="38%" cy="35%"><stop offset="0%" stop-color="#fff"/><stop offset="55%" stop-color="#ddd"/><stop offset="100%" stop-color="#aaa"/></radialGradient>
+            <linearGradient id="gal6g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#f2dfa0"/></linearGradient>
+          </defs>
+          <circle cx="90" cy="95" r="48" fill="url(#gal6p)" stroke="url(#gal6g)" stroke-width="2"/>
+          <circle cx="160" cy="115" r="36" fill="url(#gal6p)" stroke="url(#gal6g)" stroke-width="2"/>
+          <circle cx="130" cy="60" r="28" fill="url(#gal6p)" stroke="url(#gal6g)" stroke-width="2"/>
+          <circle cx="70" cy="170" r="22" fill="url(#gal6p)" stroke="url(#gal6g)" stroke-width="1.5"/>
+          <text x="120" y="210" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="rgba(201,168,76,0.5)">Pearl Collection</text>
+        </svg>
+        <div class="gallery-overlay"><div class="gallery-zoom">+</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════════ -->
+<section style="padding:100px 0;background:var(--dark2)">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Client Love</span>
+      <h2 class="title">What Our Clients <em>Say</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"I purchased a Blue Sapphire as recommended by my astrologer, and Rajasthan made the experience seamless. The stone arrived beautifully certified and the quality far exceeded my expectations."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div><div class="testi-name">Priya Mehta</div><div class="testi-loc">Mumbai, Maharashtra</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"The gemologists here are incredibly knowledgeable. They helped me select the perfect Yellow Sapphire for my daughter's engagement ring. A truly premium experience from start to finish."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div><div class="testi-name">Rajesh Sharma</div><div class="testi-loc">New Delhi, India</div></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="testi-text">"I would only recommend Rajasthan to anyone seeking genuine astrological gemstones. The personalised consultation was eye-opening and my Ruby has brought tremendous positive changes."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div><div class="testi-name">Ananya Krishnan</div><div class="testi-loc">Bengaluru, Karnataka</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════ -->
+<section class="section contact-bg" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Reach Out</span>
+      <h2 class="title">Contact <em>Us</em></h2>
+      <div class="divider"><span class="divider-gem"></span></div>
+    </div>
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Office Address</div>
+            <div class="ci-value">Gem Plaza, 3rd Floor, Plot No. 123<br/>Diamond Developer Square<br/>Ghaziabad, Uttar Pradesh — 201 001</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Phone</div>
+            <div class="ci-value">+91 956 0253 584</div>
+            <div class="ci-sub">Also on WhatsApp</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">✉</div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value">rajasthangemsjewel@gmail.com</div>
+            <div class="ci-sub">Reply within 24 hours</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">🕐</div>
+          <div>
+            <div class="ci-label">Hours</div>
+            <div class="ci-value">Mon – Sun: 10:00 AM – 7:00 PM</div>
+            <div class="ci-sub">Sunday: Closed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-panel">
+        <div class="form-panel-title">Send a Message</div>
+        <div class="form-panel-sub">We'll respond within 24 hours</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" placeholder="Your name"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="your@email.com"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Enquiry Type</label>
+          <select class="form-control">
+            <option value="">Select type…</option>
+            <option>Gemstone Consultation</option>
+            <option>Astrological Recommendation</option>
+            <option>Custom Jewellery Order</option>
+            <option>Product Information</option>
+            <option>Order / Shipping Query</option>
+            <option>Return / Exchange</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Tell us about the gemstone or service you're interested in…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:16px">Send Message →</button>
+        <p style="font-size:11.5px;color:var(--text-muted);text-align:center;margin-top:16px">Your information is safe with us. We never share your details.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <a href="#" class="nav-logo" style="display:inline-flex;margin-bottom:18px">
+          <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#0a0a0f"/></svg></div>
+          <div class="logo-text"><span class="logo-name">Rajasthan</span><span class="logo-sub">Gems &amp; Jewellery</span></div>
+        </a>
+        <p class="footer-desc">India's trusted destination for authentic astrological gemstones and fine jewellery since 1995. Every stone certified, genuine, and ethically sourced.</p>
+        <div class="socials">
+          <a href="#" class="social" title="Facebook">f</a>
+          <a href="#" class="social" title="Instagram">in</a>
+          <a href="#" class="social" title="Twitter">𝕏</a>
+          <a href="#" class="social" title="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#gemstones">Gemstones</a>
+          <a href="#jewellery">Jewellery</a>
+          <a href="#products">Shop</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Gemstones</div>
+        <div class="footer-links">
+          <a href="#">Blue Sapphire (Neelam)</a>
+          <a href="#">Yellow Sapphire (Pukhraj)</a>
+          <a href="#">Ruby (Manik)</a>
+          <a href="#">Emerald (Panna)</a>
+          <a href="#">Pearl (Moti)</a>
+          <a href="#">Diamond (Heera)</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Get In Touch</div>
+        <div class="footer-ci"><span class="footer-ci-icon">📍</span><span>Gem Plaza, Ghaziabad, UP, India</span></div>
+        <div class="footer-ci"><span class="footer-ci-icon">📞</span><span>+91 95602 53584</span></div>
+        <div class="footer-ci"><span class="footer-ci-icon">✉</span><span>rajasthangemsjewel@gmail.com</span></div>
+        <div class="footer-ci"><span class="footer-ci-icon">🕐</span><span>Mon – Sun: 10 AM – 7 PM</span></div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Rajasthan. All Rights Reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
